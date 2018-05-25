@@ -1,8 +1,4 @@
-x = 0
-
-for num in 1...1000
-  if num % 3 == 0 || num % 5 == 0
-    x += num
-  end
-end
-print x
+sequence = Array.new(1001){|i| i.to_i}
+total = 0
+sequence.each { |n| total += n if n % 3 == 0 || n % 5 ==0 }
+p total
