@@ -1,6 +1,6 @@
 require "minitest/autorun"
 require "minitest/rg"
-require_relative('../project_e6.rb')
+require_relative('../projects/project_e6.rb')
 
 class TestProject6 < MiniTest::Test
   def test_sum_of_square
