@@ -21,5 +21,13 @@ def prime_divs(number)
   return divisor_tracker
 end
 
-# binding.pry
-# nil
+def group_divisors(number)
+  prime_divs(number).group_by {|number| number}.values
+end
+
+def number_of_divisors(number)
+  numd = 1
+  divisor_hash = group_divisors(number)
+  divisor_hash.each {|pkey| numd *= pkey.length + 1 }
+  return numd
+end
