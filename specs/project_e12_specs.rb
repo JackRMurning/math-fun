@@ -4,19 +4,22 @@ require_relative('../projects/project_e12.rb')
 
 class TestProjectE12 < MiniTest::Test
 
-  def test_triangle__number_gen()
-    assert_equal(28, triangle_number_gen(7))
+  def test_triangle_number()
+    assert_equal(28, triangle_number(7))
   end
 
-  def test_prime_divs()
-    assert_equal(5, prime_divs(688).length)
+  def test_triangle_list()
+    result = [1, 3, 6, 10, 15, 21, 28]
+    assert_equal(result, triangle_list(7))
   end
 
-  def test_group_divisors()
-    assert_equal(2, group_divisors(688).length)
+  def test_prime_factors()
+    result = [2, 2, 7]
+    assert_equal(result, prime_factors(28))
   end
 
-  def test_number_of_divisors()
-    assert_equal(6, number_of_divisors(28))
-  end
+  # def test_prime_divs()
+  #   result = [2, 2, 7]
+  #   assert_equal(result, prime_divs(28))
+  # end
 end
