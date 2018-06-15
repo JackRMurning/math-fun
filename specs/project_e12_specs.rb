@@ -15,11 +15,19 @@ class TestProjectE12 < MiniTest::Test
 
   def test_prime_factors()
     result = [2, 2, 7]
+    @prime_checklist = prime_list(500)
     assert_equal(result, prime_factors(28))
   end
 
-  # def test_prime_divs()
-  #   result = [2, 2, 7]
-  #   assert_equal(result, prime_divs(28))
-  # end
+  def test_divisor_group()
+    result = divisor_group([2, 2, 7])
+    assert_equal(2, result[2])
+  end
+
+  def test_divisor_count()
+    divHash = divisor_group([2, 2, 7])
+    result = divisor_count(divHash)
+    assert_equal(6, result)
+  end
+
 end
