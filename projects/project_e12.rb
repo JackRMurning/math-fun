@@ -19,9 +19,17 @@ def factor_count(prime_factors_array)
   return total
 end
 
+def integration()
+  counter = 1
+  factor_total = 0
+  while factor_total < 500
+    tnum = triangle_number_gen(counter)
+    pfactors = prime_factors(tnum)
+    factor_total = factor_count(pfactors)
+    counter += 1
+  end
+  result = triangle_number_gen(counter - 1)
+  return result
+end
 
-
-
-
-binding.pry
-nil
+p integration()
