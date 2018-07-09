@@ -1,9 +1,7 @@
 require "minitest/autorun"
 require "minitest/rg"
 require "prime"
-
-
-require_relative('binomial_coefficient')
+require_relative '../binomial_coefficient'
 
 class TestBinomialCoefficient < MiniTest::Test
   def test_ruby_binomial_coefficient

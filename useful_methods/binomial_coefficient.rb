@@ -1,5 +1,5 @@
 # A binomial coefficient generator using ruby reduce enumerator.
-require_relative 'useful_methods/factorial'
+require_relative 'factorial'
 def binomial_coefficient(n, k)
   n_subtract_k = n - k
   # n_subtract_k = 1 if n_subtract_k == 0
