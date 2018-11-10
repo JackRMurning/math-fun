@@ -22,6 +22,6 @@ const sieveOfEratosthenes = (number) => {
             return index + 1
         }
     })
+    primeNumbers.shift()
     return primeNumbers.filter(Boolean)
 }
-
