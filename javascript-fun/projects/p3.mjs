@@ -1,27 +1,14 @@
-// The prime factors of 13195 are 5, 7, 13 and 29.
+import { sieveOfEratosthenes } from '../common-functions';
 
-// What is the largest prime factor of the number 600851475143 ?
-
-const sieveOfEratosthenes = (number) => {
-    const primes = [];
-    for(let i=1; i <= number; i++){
-        primes.push(true)
-    }
+const largestPrimeFactor = (number) => {
+    const checkLimit = parseInt(Math.sqrt(number))
+    const primes = sieveOfEratosthenes(checkLimit).reverse()
     
-    for (let i = 2; i <= parseInt(Math.sqrt(number)); i++){
-        if(primes[i] === true){
-            for(let j = 0; (i**2) + (j*i) <= number; j++){
-                let index = (i**2) + (j*i)
-                primes[index] = false;
-            }
+    for(let prime of primes){        
+        if( number % prime === 0 ){
+            return prime
         }
     }
-    primes.shift()
-    const primeNumbers = primes.map( (e, index) =>  {
-        if(e === true){
-            return index + 1
-        }
-    })
-    primeNumbers.shift()
-    return primeNumbers.filter(Boolean)
 }
+
+console.log(largestPrimeFactor(600851475143));
