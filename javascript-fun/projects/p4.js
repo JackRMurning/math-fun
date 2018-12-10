@@ -24,7 +24,7 @@ const palindromeCheck = (start, end) => {
     }
 }
 
-palindromeCheck(100,999);
+console.log(palindromeCheck(100,999));
 
 
 
