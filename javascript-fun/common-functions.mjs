@@ -35,3 +35,13 @@ export function sieveOfEratosthenes(number){
     primeNumbers.shift()
     return primeNumbers.filter(Boolean)
 }
+
+export function factorDecomposition( number, checklist, factors = [] ){
+    for (let p of checklist){
+        if(number % p == 0){
+            const n = number / p;
+            factors.push(p)
+            return( n == 1 ? factors :  factorDecomposition(n, checklist, factors));
+        }
+    }
+}
