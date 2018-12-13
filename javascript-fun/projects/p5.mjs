@@ -1,21 +1,12 @@
-/* 
-node --experimental-modules projects/p5.mjs
-1. get a list of the primes up to the range limit of the divisor set.
-2. generate a list of our desired divisors.
-3. get the prime factor decomposition of each number in the divisor set array of arrays
-4. create map with
-    -key = unique prime
-    -value = maximum number of entries the key prime appears in a prime factor decomposition.
-    
-    i.e. map of primesDecompEntryQuantities for 1-6:
-    {
-        2: 2,
-        3: 1,
-        5: 1
-    }
-5. raise calculate the product of of totals from raising keys to power of their values.
-*/
+/*
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+Answer: 232792560
+
+node --experimental-modules projects/p5.mjs
+*/
 import {factorDecomposition, sieveOfEratosthenes} from '../common-functions';
 
 function p5(number){
