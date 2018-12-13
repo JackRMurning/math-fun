@@ -16,10 +16,32 @@ node --experimental-modules projects/p5.mjs
 5. raise calculate the product of of totals from raising keys to power of their values.
 */
 
-import { sieveOfEratosthenes, factorDecomposition } from '../common-functions';
+import {factorDecomposition, sieveOfEratosthenes} from '../common-functions';
 
-const check = sieveOfEratosthenes(10);
+function p5(number){
+    const primesUpToNumber = sieveOfEratosthenes(number);
+    const maxPrimeOccurences = new Map();
+    for(let i= 2; i <=number; i++ ){
+        const primeFactorDecomposition = factorDecomposition(i, primesUpToNumber);
+        for (let p of primesUpToNumber){
+            let count = 0;
+            for(let i=0; i<primeFactorDecomposition.length; i++){
+                if (primeFactorDecomposition[i] == p){
+                    count++;
+                }
+            }
+            if(!maxPrimeOccurences.has(p) || maxPrimeOccurences.get(p) < count){
+                maxPrimeOccurences.set(p, count)
+            } 
+        }
+    }
+    const iterator = maxPrimeOccurences.entries();
+    let total = 1;
+    for (let kp of iterator){
+        const amount= kp[0]**kp[1]
+        total*= amount;
+    }
+    return total;
+}
 
-console.log(factorDecomposition(20, check))
-
-
+console.log(p5(20));
