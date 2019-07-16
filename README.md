@@ -9,3 +9,5 @@ useful_methods directory contains methods which I have found myself re-writing t
 They have their own dedicated spec folder to test them so that they can be kept separate.
 
 Any files which are one off cases have been kept in the main directory which I will move further down the line.
+
+I love bacon
