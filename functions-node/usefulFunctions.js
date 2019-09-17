@@ -1,5 +1,3 @@
-
-
 const factorize = (number, checkList, factorArray = []) => {
     
     if (checkList.includes(number)) { 
@@ -27,4 +25,4 @@ const factorize = (number, checkList, factorArray = []) => {
     return factorArray
 }
 
-console.log(factorize(33, [2, 2, 3], []))
+module.exports.factorize = factorize;
