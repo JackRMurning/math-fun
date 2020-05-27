@@ -1,0 +1,27 @@
+{
+  "name": "math-fun",
+  "version": "1.0.0",
+  "description": "mainly project euler solutions, some other fun mathematic related things might make their way in here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackRMurning/math-fun.git"
+  },
+  "keywords": [
+    "project",
+    "euler",
+    "mathematics"
+  ],
+  "author": "Jack Richard Murning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JackRMurning/math-fun/issues"
+  },
+  "homepage": "https://github.com/JackRMurning/math-fun#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
